@@ -12,7 +12,8 @@ class RegisterController extends Controller
 
     public function store(Request $request) {
 
-         $data = $request->all();
+        $data = $request->all();
+
         // $data = $request->only(['name', 'email']);
         // $data = $request->except(['name', 'email']);
         // $data = $request->input('name');
@@ -30,8 +31,12 @@ class RegisterController extends Controller
         $passwordConfirmation = $request->input('password_confirmation');
         $agreement = $request->boolean('agreement');
 
-        dd($name, $email, $password, $passwordConfirmation, $agreement);
+        // dd($name, $email, $password, $passwordConfirmation, $agreement);
 
-        return 'store Register';
+        if(true) {
+            return redirect()->back()->withInput();
+        }
+
+        return redirect()->route('user');
     }
 }
