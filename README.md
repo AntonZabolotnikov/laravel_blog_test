@@ -76,3 +76,18 @@ public function store(Request $request) {
 - ```$request->fullUrl()``` - вывод URL с Get-параметрами
 - ```$request->is('login')``` - проверить путь (```$request->is('log*')```)
 - ```$request->routeIs('login.store')``` - проверить путь роута
+
+# 12 
+- https://laravel.com/docs/9.x/responses
+
+- Получить ответ
+```php
+return response('test', 200, [
+    'foo' => 'bar'
+]);
+```
+- ```response()->json(['foo' => 'bar']);``` - Ответ в виде json
+- ```response()->redirectTo('/foo');``` - Редирект на определенный путь (или ```redirect('/foo')```)
+- ```response()->redirectToRoute('user');``` - Редирект на определенный роут (или ```redirect()->route('user')```)
+- ```return redirect()->back()``` - Вернуться назад (остаться на странице)
+- ```redirect()->back()->withInput()``` - Редирект обратно с данными
