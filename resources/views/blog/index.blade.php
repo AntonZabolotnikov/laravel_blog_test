@@ -8,6 +8,8 @@
         {{ __('Список постов') }}
     </x-title>
 
+    @include('blog.filter')
+
     @if(empty($posts))
         {{ __('Постов не найдено') }}
     @else

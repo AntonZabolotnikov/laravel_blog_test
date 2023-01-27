@@ -21,6 +21,11 @@
         <x-form action="{{ route('register.store') }}" method="POST">
 
             <x-form-item>
+                <x-label required>{{ __('Имя') }}</x-label>
+                <x-input type="text" name="name" autofocus />
+            </x-form-item>
+
+            <x-form-item>
                 <x-label required>{{ __('Email') }}</x-label>
                 <x-input type="email" name="email" autofocus />
             </x-form-item>
@@ -36,7 +41,7 @@
             </x-form-item>
 
             <x-form-item>
-                <x-checkbox name="remember">
+                <x-checkbox name="agreement">
                     {{ __('Согласен на обработку данных') }}
                 </x-checkbox>
             </x-form-item>
