@@ -61,18 +61,18 @@ public function store(Request $request) {
         return 'store Register';
     }
 ```
-```$request->only(['name', 'email'])``` - Получить определенные поля
-```$request->except(['name', 'email'])``` - Исключить определенные поля
-```$request->input('email')``` - Значение нужного поля (или так ```$request->email```)
-```$remember = !! $request->input('remember')``` - Привести к булевому значению (или ```$request->boolean('remember')```)
-```$request->file('avatar')``` - Получить файл
-```$request->has('name')``` - Проверить наличие в запросе
-```$request->filled('name')``` - Заполнен ли параметр
-```$request->missing('name')``` - Пропущен ли параметр
-```@unless()``` - Проверка на лож (обратно ```@if()```) 
-```$request->ip()``` - получить ip
-```$request->path()``` - путь
-```$request->url()``` - вывод URL без Get-параметров
-```$request->fullUrl()``` - вывод URL с Get-параметрами
-```$request->is('login')``` - проверить путь (```$request->is('log*')```)
-```$request->routeIs('login.store')``` - проверить путь роута
+- ```$request->only(['name', 'email'])``` - Получить определенные поля
+- ```$request->except(['name', 'email'])``` - Исключить определенные поля
+- ```$request->input('email')``` - Значение нужного поля (или так ```$request->email```)
+- ```$remember = !! $request->input('remember')``` - Привести к булевому значению (или ```$request->boolean('remember')```)
+- ```$request->file('avatar')``` - Получить файл
+- ```$request->has('name')``` - Проверить наличие в запросе
+- ```$request->filled('name')``` - Заполнен ли параметр
+- ```$request->missing('name')``` - Пропущен ли параметр
+- ```@unless()``` - Проверка на лож (обратно ```@if()```) 
+- ```$request->ip()``` - получить ip
+- ```$request->path()``` - путь
+- ```$request->url()``` - вывод URL без Get-параметров
+- ```$request->fullUrl()``` - вывод URL с Get-параметрами
+- ```$request->is('login')``` - проверить путь (```$request->is('log*')```)
+- ```$request->routeIs('login.store')``` - проверить путь роута
