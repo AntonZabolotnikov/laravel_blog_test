@@ -91,3 +91,15 @@ return response('test', 200, [
 - ```response()->redirectToRoute('user');``` - Редирект на определенный роут (или ```redirect()->route('user')```)
 - ```return redirect()->back()``` - Вернуться назад (остаться на странице)
 - ```redirect()->back()->withInput()``` - Редирект обратно с данными
+
+# 13
+- https://laravel.com/docs/9.x/session
+
+- ```session()``` - установить сессию (или ```app('session')```)
+- ```session(['foo' => 'bar'])``` - установить значения сессии
+- ```session('foo')``` - получить
+- ```session()->all()``` - вывод всех данных
+- ```session()->has('foo')``` - проверить 
+- ```session()->forget('foo')``` - удалить данные по ключу
+- ```session()->flush()``` - удалить все данные
+- ```session()->pull('alert')``` - получить и сразу удалить запись
