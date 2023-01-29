@@ -136,3 +136,22 @@ protected $casts = ['price' => 'float', 'active' => 'boolean'];
 protected $dates = ['active_at'];
 
 ```
+
+# 16
+- https://laravel.com/docs/9.x/validation
+
+- ```validator()```
+- Проверка и вывод
+  ```php
+  $validator = validator(['email' => 'test@gmail.com'], ['email' => ['required', 'string', 'email']]);
+  $validator->passes(); // true/false
+  $validator->fails(); // обратно passes()
+  $validator->validate(); // вернет в массив то, что прошло проверку
+  ```
+- В контроллере
+```php
+$validated = $request->validate([
+    'title' => ['required', 'string', 'max:100'],
+    'content' => ['required', 'string'],
+]);
+```
