@@ -114,3 +114,25 @@ return response('test', 200, [
 - ```sail artisan migrate:fresh``` - перекатить все миграции (удаляет базу и накатывает миграции)
 - ```sail artisan migrate:refresh``` - перекатить все миграции (откатывает и накатывает миграции)
 - ```sail artisan make:migration add_admin_field_to_users_table``` - миграция на добавление поля
+
+# 15
+- https://laravel.com/docs/9.x/eloquent
+
+- ```sail artisan make:model Currency``` - создать модель
+- ```sail artisan make:model Currency -m``` - создать модель с миграцией 
+- Получение данных
+```php
+$currency = Currency::first();
+$currency->toArray();
+$currency->toJson();
+$currency->name;
+```
+- Модель
+```php
+$incrementing = false;
+protected $fillaple = ['id', 'name', 'price'];
+protected $hidden = ['price'];
+protected $casts = ['price' => 'float', 'active' => 'boolean'];
+protected $dates = ['active_at'];
+
+```
