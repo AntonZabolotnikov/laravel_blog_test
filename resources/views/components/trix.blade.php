@@ -1,4 +1,4 @@
-<input type="hidden" {{ $attributes }} id="{{ $name }}">
+<input type="hidden" {{ $attributes }} id="{{ $name }}" >
 <trix-editor input="{{ $name }}"></trix-editor>
 @once
     @push('css')

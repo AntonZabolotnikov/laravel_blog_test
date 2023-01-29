@@ -18,6 +18,6 @@
             </div>
         @endisset
     </div>
-
-    
 </div>
+
+<x-errors />
