@@ -103,3 +103,14 @@ return response('test', 200, [
 - ```session()->forget('foo')``` - удалить данные по ключу
 - ```session()->flush()``` - удалить все данные
 - ```session()->pull('alert')``` - получить и сразу удалить запись
+
+# 14
+- https://laravel.com/docs/9.x/migrations
+  
+- ```sail artisan make:migration create_users_table``` - создать миграцию
+- ```sail artisan migrate``` - накатить миграции
+- ```sail artisan migrate:rollback``` - откатить миграцию
+- ```sail artisan migrate:reset``` - откатить все миграции
+- ```sail artisan migrate:fresh``` - перекатить все миграции (удаляет базу и накатывает миграции)
+- ```sail artisan migrate:refresh``` - перекатить все миграции (откатывает и накатывает миграции)
+- ```sail artisan make:migration add_admin_field_to_users_table``` - миграция на добавление поля
