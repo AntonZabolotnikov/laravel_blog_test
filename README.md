@@ -155,3 +155,10 @@ $validated = $request->validate([
     'content' => ['required', 'string'],
 ]);
 ```
+
+# 17
+- https://laravel.com/docs/9.x/validation#available-validation-rules
+
+- ```new Carbon\Carbon('2023-10-01')``` - Для паботы с датой
+- ```sail artisan make:rule Phone``` - Создать кастомное правило
+- ```/app/Providers/RouteServiceProvider.php``` - регистрация роутов
